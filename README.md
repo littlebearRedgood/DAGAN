@@ -23,3 +23,6 @@
 ## Get Started
 #### Pretrained models
 - Models are available in ```'./saveModels/generator/generator.pth' and './saveModels/discriminator/discriminator.pth'```
+
+# Citation
+If our work is useful for your research, please cite our work
