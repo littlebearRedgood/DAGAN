@@ -23,6 +23,8 @@
 ## Get Started
 #### Pretrained models
 - Models are available in ```'./saveModels/generator/generator.pth' and './saveModels/discriminator/discriminator.pth'```
+- The download link for the Pretrained models is:https://drive.google.com/file/d/1EsG5z_yJecoreN_HXV6M_MPubjTlPlBW/view?usp=sharing
+#### Test:
 
 # Citation
 If our work is useful for your research, please cite our work
