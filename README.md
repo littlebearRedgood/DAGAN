@@ -20,4 +20,4 @@
 
 ## Get Started
 #### Pretrained models
-- Models are available in ```'./saveModels/generator.pth' and './saveModels/discriminator.pth'```
+- Models are available in ```'./saveModels/generator/generator.pth' and './saveModels/discriminator/discriminator.pth'```
