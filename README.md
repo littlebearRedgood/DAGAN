@@ -28,6 +28,9 @@
 - Run this command to execute
 
         python test.py --generator_weights ./saveModels/generator/generator.pth --discriminator_weights ./saveModels/discriminator/discriminator.pth --input_path ./DataSets/dataset/raw/ --output_path ./DataSets/dataset/our/
+#### Train:
+- Run this command to execute
+        python train.py --batch 32 --epoch 100 --lr 0.0001 --checkpoint_interval 10 --sample_interval 50 --resume True 
 
 # Citation
 If our work is useful for your research, please cite our work
