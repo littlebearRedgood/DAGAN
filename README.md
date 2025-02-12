@@ -17,3 +17,7 @@
 - Packages:
 
         pip install -r requirements.txt
+
+## Get Started
+#### Pretrained models
+- Models are available in ```'./saveModels/generator.pth' and './saveModels/discriminator.pth'```
