@@ -20,6 +20,12 @@
 
 ## Datasets
 - The datasets used include SUIM, UIEB, EUVP, LSUI, UCCS, and SQUID.
+- SUIM  (The download link is: https://pan.baidu.com/s/1cgdUaANiftDBSNuEzDdGdw?pwd=suim)
+- UIEB  (The download link is: https://pan.baidu.com/s/1gKx1LqgzBNiesAsbtEbTbg?pwd=uieb)
+- EUVP  (The download link is: https://pan.baidu.com/s/1HeBVXw2PLNSLaemYuBi6_w?pwd=eubp)
+- LSUI  (The download link is: https://pan.baidu.com/s/1BUTwL55wI2h56LlB9Lk7Yw?pwd=lsui)
+- UCCS  (The download link is: https://pan.baidu.com/s/1kqMi-syxTSmx_SZEvpbk8Q?pwd=uccs)
+- SQUID (The download link is: https://pan.baidu.com/s/1ICmcWaxIOJuaID_4rnqUqQ?pwd=squi)
 ## Get Started
 #### Pretrained models
 - Models are available in ```'./saveModels/generator/generator.pth' and './saveModels/discriminator/discriminator.pth'```
