@@ -19,7 +19,7 @@
         pip install -r requirements.txt
 
 ## Datasets
-
+- The datasets used include SUIM, UIEB, EUVP, LSUI, UCCS, and SQUID.
 ## Get Started
 #### Pretrained models
 - Models are available in ```'./saveModels/generator/generator.pth' and './saveModels/discriminator/discriminator.pth'```
