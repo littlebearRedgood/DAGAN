@@ -1,11 +1,11 @@
 import json
 import os
-
+import time
 import cv2
 import torch
 from torch.autograd import Variable
 from torchvision.utils import save_image
-
+from model.base_model.discriminator import Discriminator
 from model.base_model.generator import Generator
 
 
@@ -15,13 +15,15 @@ def load_config(file_path: str) -> dict:
 
 
 def load_and_setup_model(params):
-    cuda = True if torch.cuda.is_available() else False
-    Tensor = torch.cuda.FloatTensor if cuda else torch.FloatTensor
+    # cuda = True if torch.cuda.is_available() else False
+    # Tensor = torch.cuda.FloatTensor if cuda else torch.FloatTensor
 
     generator = Generator(params).cuda()
-    # generator.load_state_dict(torch.load("./saveModels/generator/generator_5.pth"))
-    generator.load_state_dict(torch.load("./saveModels/generator/generator_100.pth"))
+    discriminator = Discriminator().cuda()
+    generator.load_state_dict(torch.load("./saveModels/generator_.pth"))
+    discriminator.load_state_dict(torch.load("./saveModels/discriminator_.pth"))
     generator.eval()
+    discriminator.eval()
     return generator
 
 
@@ -43,7 +45,10 @@ def generate_images(generator, path, output_dir):
         img_path = os.path.join(path, item)
         print(f"Processing image at: {img_path}")
         img_input = process_image(img_path)
+        start_time = time.time()
         output = generator(img_input)[3].data
+        inference_time = time.time() - start_time
+        # print(f"Inference time: {inference_time:.3f} seconds")
         save_image(output, os.path.join(output_dir, item), nrow=5, normalize=True)
 
 
@@ -52,9 +57,8 @@ def main():
     os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
     os.environ["CUDA_VISIBLE_DEVICES"] = '0'
     torch.set_default_tensor_type(torch.FloatTensor)
-
     generator = load_and_setup_model(params)
-    generate_images(generator, './DataSets/test/input/', './DataSets/test/output/')
+    generate_images(generator, './DataSets/UIEB/raw/', './DataSets/UIEB/our/')
 
 
 if __name__ == '__main__':
