@@ -25,6 +25,9 @@
 - Models are available in ```'./saveModels/generator/generator.pth' and './saveModels/discriminator/discriminator.pth'```
 - The download link for the Pretrained models is:https://drive.google.com/file/d/1EsG5z_yJecoreN_HXV6M_MPubjTlPlBW/view?usp=sharing
 #### Test:
+Run this command to execute
+
+python test.py --generator_weights ./saveModels/generator/generator.pth --discriminator_weights ./saveModels/discriminator/discriminator.pth --input_path ./DataSets/dataset/raw/ --output_path ./DataSets/dataset/our/
 
 # Citation
 If our work is useful for your research, please cite our work
