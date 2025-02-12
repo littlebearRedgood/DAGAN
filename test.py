@@ -20,8 +20,8 @@ def load_and_setup_model(params):
 
     generator = Generator(params).cuda()
     discriminator = Discriminator().cuda()
-    generator.load_state_dict(torch.load("./saveModels/generator_.pth"))
-    discriminator.load_state_dict(torch.load("./saveModels/discriminator_.pth"))
+    generator.load_state_dict(torch.load("./saveModels/generator_epoch.pth"))
+    discriminator.load_state_dict(torch.load("./saveModels/discriminator_epoch.pth"))
     generator.eval()
     discriminator.eval()
     return generator
