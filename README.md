@@ -18,7 +18,7 @@
 
         pip install -r requirements.txt
 
-## DataSets
+## Datasets
 
 ## Get Started
 #### Pretrained models
